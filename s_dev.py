@@ -1,0 +1,15 @@
+def method(array):
+    out = 0.0
+    mean = 0.0
+    length = 0
+    for row in array:
+        #length +=1
+        for val in row:
+            length += 1
+            mean += val
+    mean = mean/length
+    print "mean: ", mean
+    for row in array:
+        for val in row:
+            out += (mean - val)**2
+    return (out/length)**0.5             
